@@ -38,3 +38,7 @@ A estrutura do projeto é a seguinte:
 ## Responsividade
 
 O layout da aplicação é projetado para ser responsivo e se ajustar a diferentes tamanhos de tela, incluindo dispositivos móveis e tablets.
+
+## Contato
+
+Feito por Bruno Parga
