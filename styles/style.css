@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --cor-primaria: #0A3871;
+    --cor-secundaria: #FFFFFF;
+    --cor-terciaria: #E9ECF8;
+    --cor-quaternaria: #343A40;
+    --fonte-primaria: "Inter", sans-serif;
+}
+
+body {
+    font-family: var(--fonte-primaria);
+    margin: 0;
+    background-color: var(--cor-terciaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header img {
+    max-width: 150px;
+    margin-left: 20px;
+}
+
+.texto {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.entrada__texto {
+    order: 1;
+    flex: 1;
+    min-width: 280px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--cor-secundaria);
+    border-radius: 10px;
+}
+
+.saida__texto {
+    order: 2;
+    position: relative;
+    cursor: not-allowed;
+    flex: 1;
+    min-width: 280px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--cor-secundaria);
+    border-radius: 10px;
+}
+
+.saida__texto__placeholder {
+    position: relative;
+}
+
+.saida__texto__placeholder__customizado {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: var(--cor-quaternaria);
+    pointer-events: none;
+    text-align: center;
+}
+
+#saidaTexto[readonly] + .saida__texto__placeholder__customizado {
+    display: block;
+}
+
+#saidaTexto[readonly]:not(:placeholder-shown) + .saida__texto__placeholder__customizado {
+    display: none;
+}
+
+.saida__texto__placeholder__customizado strong {
+    display: block;
+    font-weight: bold;
+}
+
+.saida__texto__placeholder__customizado span {
+    display: block;
+    font-weight: normal;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 0px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.saida__texto__imagem {
+    display: block;
+    margin: 10px auto 0 auto;
+    max-width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 24px;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+    cursor: pointer;
+}
+
+.botao__encriptografar {
+    background-color: var(--cor-primaria);
+}
+
+.botao__descriptografar {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+}
+
+.botao__copiar {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.entrada__texto__aviso {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+.entrada__texto__aviso img {
+    width: 20px;
+    height: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .texto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .entrada__texto, .saida__texto {
+        width: 100%;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografia</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/Logo.png" alt="Logo da Alura">
+    </header>
+
+    <div class="texto">
+        <div class="entrada__texto">
+            <textarea id="entradaTexto" placeholder="Digite seu texto"></textarea>
+            <div class="entrada__texto__aviso">
+                <img src="/img/exclamacao.png" alt="Ícone de Exclamação">
+                <span>Apenas letras minúsculas e sem acento</span>
+            </div>
+            <div class="botoes">
+                <button class="botao__encriptografar" onclick="encriptografar()">Encriptografar</button>
+                <button class="botao__descriptografar" onclick="descriptografar()">Descriptografar</button>
+            </div>
+        </div>
+        <div class="saida__texto">
+            <div class="saida__texto__placeholder">
+                <textarea id="saidaTexto" placeholder=" " readonly></textarea>
+                <div class="saida__texto__placeholder__customizado">
+                    <strong>NENHUMA MENSAGEM ENCONTRADA</strong>
+                    <span>Digite um texto que você deseja criptografar ou descriptografar.</span>
+                </div>
+            </div>
+            <img class="saida__texto__imagem" src="/img/bonecolupa.svg" alt="Imagem homem com lupa">
+            <button class="botao__copiar" onclick="copiar()">Copiar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Desenvolvido por Bruno Parga</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
